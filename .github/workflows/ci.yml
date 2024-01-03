@@ -38,7 +38,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [warp-ubuntu-latest-x64-4x]
+        os: [warp-ubuntu-latest-x64-16x]
         node_version: [18, 20]
         include:
           # Active LTS + other OS
@@ -128,7 +128,7 @@ jobs:
 
   lint:
     timeout-minutes: 10
-    runs-on: warp-ubuntu-latest-x64-4x
+    runs-on: warp-ubuntu-latest-x64-16x
     name: "Lint: node-18, ubuntu-latest"
     steps:
       - uses: actions/checkout@v4
